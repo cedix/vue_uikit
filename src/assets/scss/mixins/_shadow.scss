@@ -1,0 +1,28 @@
+$default-inset: false;
+$default-shadow-color: $black;
+$multiplier: 2;
+
+@function _box-shadow($depth, $color, $inset) {
+  $x-axis: #{$depth * $multiplier}px;
+  $y-axis: #{$depth * $multiplier}px;
+  $blur: #{$depth * ($multiplier * 2)}px;
+  $spread: 0;
+
+  @if $depth <= 0 {
+    @return "none";
+  } @else {
+    @if $inset == true {
+      @return inset $x-axis $y-axis $blur $spread rgba($color, 0.3);
+    } @else {
+      @return $x-axis $y-axis $blur $spread rgba($color, 0.3);
+    }
+  }
+}
+
+@mixin box-shadow(
+  $depth: 1,
+  $color: $default-shadow-color,
+  $inset: $default-inset
+) {
+  box-shadow: _box-shadow($depth, $color, $inset);
+}

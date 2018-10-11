@@ -1,0 +1,109 @@
+@import "../base";
+
+$color-table-base: $gray-1;
+$color-table-body: transparent;
+$color-table-cell-border: darken($color-table-base, 3%);
+$color-table-header: darken($color-table-base, 3%);
+$color-table-header-border: darken($color-table-base, 7%);
+$color-table-row-alt: $color-table-base;
+$color-table-row-hover: darken($color-table-base, 2%);
+
+:root {
+  --color-table-body: #{$color-table-body};
+  --color-table-cell-border: #{$color-table-cell-border};
+  --color-table-header: #{$color-table-header};
+  --color-table-header-border: #{$color-table-header-border};
+  --color-table-row-alt: #{$color-table-row-alt};
+  --color-table-row-hover: #{$color-table-row-hover};
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  background-color: var(--color-table-body);
+  border-collapse: collapse;
+  border: none;
+
+  th,
+  td {
+    text-align: left;
+  }
+
+  th {
+    padding: 0.75em 1em;
+    font-weight: 600;
+    background-color: var(--color-table-header);
+  }
+
+  td {
+    padding: 0.5rem 1rem;
+    @include truncate-text;
+  }
+
+  tbody,
+  tfoot {
+    &:last-of-type {
+      tr {
+        &:last-of-type {
+          td {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  tfoot {
+    td {
+      font-weight: 600;
+    }
+
+    tr {
+      &:first-of-type {
+        & td {
+          border-top: var(--border-width) solid var(--color-table-header-border);
+        }
+      }
+    }
+  }
+
+  &.table-bordered {
+    border: var(--border-width) solid var(--color-table-header-border);
+    border-radius: var(--border-radius);
+
+    td {
+      border: var(--border-width) solid var(--color-table-cell-border);
+    }
+
+    th {
+      border: var(--border-width) solid var(--color-table-header-border);
+    }
+
+    th,
+    td {
+      &:first-of-type {
+        border-left: none;
+      }
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+
+  &.table-striped {
+    tr {
+      &:nth-child(even) {
+        background-color: var(--color-table-row-alt);
+      }
+    }
+  }
+
+  &.table-hover,
+  &.table-striped {
+    tr {
+      &:hover {
+        background-color: var(--color-table-row-hover);
+      }
+    }
+  }
+}

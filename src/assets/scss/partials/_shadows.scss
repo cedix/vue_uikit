@@ -1,0 +1,7 @@
+@import "../base";
+
+@for $i from 0 through 9 {
+  .uk-shadow-#{$i} {
+    @include box-shadow($i);
+  }
+}

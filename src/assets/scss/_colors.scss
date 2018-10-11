@@ -1,0 +1,134 @@
+// -------------------------------------------------------------
+// FIXED COLORS
+// -------------------------------------------------------------
+$black: #1d1d21;
+$gray-9: #2e2e31;
+$gray-8: #4f4f54;
+$gray-7: #5f5f66;
+$gray-6: #929299;
+$gray-5: #acacb1;
+$gray-4: #c7c7ca;
+$gray-3: #e1e1e3;
+$gray-2: #f2f2f3;
+$gray-1: #fafafa;
+$white: #fff;
+
+$color-success: #88c459;
+$color-success-bg: rgba($color-success, 0.1);
+$color-success-bg-accent: rgba($color-success, 0.8);
+$color-error: #f5414f;
+$color-warning: #ffd137;
+
+$color-primary: #4d84f4;
+$color-primary-bg: rgba($color-primary, 0.2);
+$color-primary-dark: darken($color-primary, 15%);
+$color-primary-light: lighten($color-primary, 15%);
+$color-accent: #f5414f;
+$color-accent-bg: rgba($color-accent, 0.2);
+$color-accent-dark: darken($color-accent, 15%);
+$color-accent-light: lighten($color-accent, 15%);
+
+/* Brand */
+$color-brand: #efc755;
+
+/* border */
+$color-border: $gray-2;
+
+/* body */
+$color-body: $gray-1;
+
+/* typography */
+$color-text: $gray-9;
+$color-text-heading: $black;
+$color-text-subtle: $gray-6;
+$color-link: $color-primary;
+$color-link-visited: $color-primary-dark;
+$color-mark: $color-accent-bg;
+$color-blockquote-border: $gray-2;
+
+/* forms */
+$form-element-border: $color-border;
+$form-element-border-focus: $color-primary;
+$form-element-border-error: $color-error;
+$form-element-bg: $white;
+$form-text-placeholder: $gray-4;
+
+/* buttons */
+$btn-primary-bg: $color-primary;
+$btn-primary-hover: $color-primary-light;
+$btn-primary-active: $color-primary-dark;
+$btn-primary-label: $white;
+
+/* icons */
+$color-icon-primary: $gray-4;
+$color-icon-secondary: inherit;
+
+// -------------------------------------------------------------
+// CSS VARIABLES
+// -------------------------------------------------------------
+:root {
+  --black: #{$black};
+  --gray-9: #{$gray-9};
+  --gray-8: #{$gray-8};
+  --gray-7: #{$gray-7};
+  --gray-6: #{$gray-6};
+  --gray-5: #{$gray-5};
+  --gray-4: #{$gray-4};
+  --gray-3: #{$gray-3};
+  --gray-2: #{$gray-2};
+  --gray-1: #{$gray-1};
+  --white: #{$white};
+
+  --color-success: #{$color-success};
+  --color-success-bg: #{$color-success-bg};
+  --color-error: #{$color-error};
+  --color-warning: #{$color-warning};
+
+  --color-primary: #{$color-primary};
+  --color-primary-bg: #{$color-primary-bg};
+  --color-primary-dark: #{$color-primary-dark};
+  --color-primary-light: #{$color-primary-light};
+  --color-accent: #{$color-accent};
+  --color-accent-bg: #{$color-accent-bg};
+  --color-accent-dark: #{$color-accent-dark};
+  --color-accent-light: #{$color-accent-light};
+
+  /* Brand */
+  --color-brand: #{$color-brand};
+
+  /* border */
+  --color-border: #{$color-border};
+
+  /* body */
+  --color-body: #{$color-body};
+
+  /* typography */
+  --color-text: #{$color-text};
+  --color-text-heading: #{$color-text-heading};
+  --color-text-subtle: #{$color-text-subtle};
+  --color-link: #{$color-link};
+  --color-link-visited: #{$color-link-visited};
+  --color-mark: #{$color-mark};
+  --color-blockquote-border: #{$color-blockquote-border};
+
+  /* forms */
+  --form-element-border: #{$form-element-border};
+  --form-element-border-focus: #{$form-element-border-focus};
+  --form-element-border-error: #{$form-element-border-error};
+  --form-element-bg: #{$form-element-bg};
+  --form-text-placeholder: #{$form-text-placeholder};
+
+  /* buttons */
+  --btn-primary-bg: #{$btn-primary-bg};
+  --btn-primary-hover: #{$btn-primary-hover};
+  --btn-primary-active: #{$btn-primary-active};
+  --btn-primary-label: #{$btn-primary-label};
+
+  /* icons */
+  --color-icon-primary: #{$color-icon-primary};
+  --color-icon-secondary: #{$color-icon-secondary};
+}
+
+:export {
+  colorsuccess: $color-success;
+}
