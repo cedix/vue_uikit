@@ -31,7 +31,7 @@ export default {
     setStyle: function () {
       let title = document.getElementsByClassName('section-title');
       let color = Colors.colorsuccess;
-      console.log(Colors);
+      console.log(color);
       
       if (color && color !== undefined) {
         title.style.color = Colors.colorsuccess;
