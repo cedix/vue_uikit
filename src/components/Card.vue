@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-card uk-color-success" :class="classes" v-if="!closed">
+  <div class="uk-card" :class="classes" v-if="!closed">
     <div class="uk-card-header" v-if="hasTitle">
       <div class="uk-card-title">
         <h3>{{ title }}</h3>
@@ -130,7 +130,7 @@ export default {
 
 :root {
   --uk-card-bg-color: $gray-1;
-  --uk-card-title-bg-color: $gray-2;
+  --uk-card-title-bg-color: $gray-3;
   --uk-card-padding: 1.4em;
 }
 
@@ -142,11 +142,6 @@ export default {
 
   background-color: var(--uk-card-bg-color);
   position: relative;
-
-  &.uk-color-success {
-    --uk-card-bg-color: $color-success-bg;
-    --uk-card-title-bg-color: $color-success-bg-accent;
-  }
 
   .uk-card-close {
     float: right;
@@ -172,6 +167,25 @@ export default {
       font-weight: bold;
       padding: 0 !important;
     }
+  }
+
+  // ---------------------------------------------------
+  // Color modifiers
+  // ---------------------------------------------------
+
+  &.uk-color-error {
+    --uk-card-bg-color: $color-error-bg;
+    --uk-card-title-bg-color: $color-error-bg-accent;
+  }
+
+  &.uk-color-success {
+    --uk-card-bg-color: $color-success-bg;
+    --uk-card-title-bg-color: $color-success-bg-accent;
+  }
+
+  &.uk-color-warning {
+    --uk-card-bg-color: $color-warning-bg;
+    --uk-card-title-bg-color: $color-warning-bg-accent;
   }
 
 }

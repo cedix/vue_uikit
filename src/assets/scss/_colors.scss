@@ -1,3 +1,5 @@
+@import "mixins/colors";
+
 // -------------------------------------------------------------
 // FIXED COLORS
 // -------------------------------------------------------------
@@ -14,10 +16,14 @@ $gray-1: #fafafa;
 $white: #fff;
 
 $color-success: #88c459;
-$color-success-bg: rgba($color-success, 0.1);
-$color-success-bg-accent: rgba($color-success, 0.8);
+$color-success-bg: color-bg($color-success);
+$color-success-bg-accent: color-bg-accent($color-success);
 $color-error: #f5414f;
+$color-error-bg: color-bg($color-error);
+$color-error-bg-accent: color-bg-accent($color-error);
 $color-warning: #ffd137;
+$color-warning-bg: color-bg($color-warning);
+$color-warning-bg-accent: color-bg-accent($color-warning);
 
 $color-primary: #4d84f4;
 $color-primary-bg: rgba($color-primary, 0.2);

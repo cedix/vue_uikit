@@ -1,6 +1,16 @@
 <template>
   <div>
-    <div class="uk-close" @click.prevent="close">&times;</div>
+    <div class="uk-close" @click.prevent="close">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="16px" y="16px"
+        viewBox="0 0 212.982 212.982" style="enable-background:new 0 0 212.982 212.982;" xml:space="preserve">
+      <g id="Close">
+        <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312
+          c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312
+          l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937
+          c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z"/>
+      </g>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -25,8 +35,33 @@ export default {
 
 
 <style lang="scss" scoped>
+@import "../assets/scss/base";
+
 .uk-close {
+  // --uk-close-size: 0.6em;
+  --uk-close-size: 1em;
+
   cursor: pointer;
-  font-size: 1em;
+  // display: block;
+  height: var(--uk-close-size);
+  width: var(--uk-close-size);
+
+  @include transition;
+
+  &:hover {
+    @include rotate-hover;
+  }
+
+  // svg {
+  //   @include transition;
+
+  //   &:active, &:focus {
+  //     @include click-button;
+  //   }
+
+  //   &:hover {
+  //     @include rotate-hover;
+  //   }
+  // }
 }
 </style>

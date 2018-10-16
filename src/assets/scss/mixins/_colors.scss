@@ -1,0 +1,7 @@
+@function color-bg($color) {
+  @return rgba($color, 0.1);
+}
+
+@function color-bg-accent($color) {
+  @return rgba($color, 0.8);
+}
