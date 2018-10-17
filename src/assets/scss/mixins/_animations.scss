@@ -1,20 +1,19 @@
-@mixin animation($name, $duration: 0.4s, $style: ease-out) {
-  animation: $name;
-  transition: all $duration $style;
-}
-
-@mixin click-button {
-  transform: scale(0.7);
-}
-
-@mixin rotate-hover(
+@mixin animation(
+  $name,
   $duration: var(--transition-duration),
   $style: var(--transition-style)
 ) {
-  // transition: rotate $duration $style;
+  animation: $name $duration $style;
+  // transition: all $duration $style;
+}
+
+@mixin rotate-hover {
   transform: rotate(180deg);
 }
 
-@mixin transition {
-  transition: all var(--transition-duration) var(--transition-style);
+@mixin transition(
+  $duration: var(--transition-duration),
+  $style: var(--transition-style)
+) {
+  transition: all $duration $style;
 }

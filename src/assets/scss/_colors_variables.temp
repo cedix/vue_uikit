@@ -1,0 +1,65 @@
+// -------------------------------------------------------------
+// CSS VARIABLES
+// -------------------------------------------------------------
+: root {
+  --black: #{ $black };
+  --gray - 9: #{ $gray - 9 };
+  --gray - 8: #{ $gray - 8 };
+  --gray - 7: #{ $gray - 7 };
+  --gray - 6: #{ $gray - 6 };
+  --gray - 5: #{ $gray - 5 };
+  --gray - 4: #{ $gray - 4 };
+  --gray - 3: #{ $gray - 3 };
+  --gray - 2: #{ $gray - 2 };
+  --gray - 1: #{ $gray - 1 };
+  --white: #{ $white };
+
+  --color - success: #{ $color - success };
+  --color - success - bg: #{ $color - success - bg };
+  --color - error: #{ $color - error };
+  --color - warning: #{ $color - warning };
+
+  --color - primary: #{ $color - primary };
+  --color - primary - bg: #{ $color - primary - bg };
+  --color - primary - dark: #{ $color - primary - dark };
+  --color - primary - light: #{ $color - primary - light };
+  --color - accent: #{ $color - accent };
+  --color - accent - bg: #{ $color - accent - bg };
+  --color - accent - dark: #{ $color - accent - dark };
+  --color - accent - light: #{ $color - accent - light };
+
+  /* Brand */
+  --color - brand: #{ $color - brand };
+
+  /* border */
+  --color - border: #{ $color - border };
+
+  /* body */
+  --color - body: #{ $color - body };
+
+  /* typography */
+  --color - text: #{ $color - text };
+  --color - text - heading: #{ $color - text - heading };
+  --color - text - subtle: #{ $color - text - subtle };
+  --color - link: #{ $color - link };
+  --color - link - visited: #{ $color - link - visited };
+  --color - mark: #{ $color - mark };
+  --color - blockquote - border: #{ $color - blockquote - border };
+
+  /* forms */
+  --form - element - border: #{ $form - element - border };
+  --form - element - border - focus: #{ $form - element - border - focus };
+  --form - element - border - error: #{ $form - element - border - error };
+  --form - element - bg: #{ $form - element - bg };
+  --form - text - placeholder: #{ $form - text - placeholder };
+
+  /* buttons */
+  --btn - primary - bg: #{ $btn - primary - bg };
+  --btn - primary - hover: #{ $btn - primary - hover };
+  --btn - primary - active: #{ $btn - primary - active };
+  --btn - primary - label: #{ $btn - primary - label };
+
+  /* icons */
+  --color - icon - primary: #{ $color - icon - primary };
+  --color - icon - secondary: #{ $color - icon - secondary };
+}

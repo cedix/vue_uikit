@@ -1,14 +1,11 @@
 <template>
   <div>
-    <div class="uk-close" @click.prevent="close">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="16px" y="16px"
-        viewBox="0 0 212.982 212.982" style="enable-background:new 0 0 212.982 212.982;" xml:space="preserve">
-      <g id="Close">
-        <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312
-          c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312
-          l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937
-          c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z"/>
-      </g>
+    <div class="uk-close" @click.prevent="close" ref="close">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 256 256">
+        <g>
+            <path d=" M 149.393 128 L 213.569 63.824 C 219.477 57.916 219.477 48.338 213.569 42.432 C 207.662 36.524 198.085 36.524 192.177 42.432 L 128 106.609 L 63.822 42.431 C 57.915 36.523 48.338 36.523 42.43 42.431 C 36.523 48.338 36.523 57.916 42.43 63.823 L 106.607 128 L 42.43 192.177 C 36.523 198.085 36.523 207.663 42.43 213.569 C 48.338 219.477 57.915 219.477 63.822 213.569 L 128 149.392 L 192.177 213.569 C 198.084 219.477 207.662 219.477 213.569 213.569 C 219.477 207.662 219.477 198.085 213.569 192.177 L 149.393 128 Z " fill-rule="evenodd" fill="rgb(0,0,0)"/>
+        </g>
       </svg>
     </div>
   </div>
@@ -36,32 +33,24 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/base";
+@import "../assets/scss/partials/animations";
 
 .uk-close {
-  // --uk-close-size: 0.6em;
   --uk-close-size: 1em;
 
   cursor: pointer;
-  // display: block;
   height: var(--uk-close-size);
   width: var(--uk-close-size);
 
   @include transition;
 
+  &:active, 
+  &:focus {
+    @include animation(click-button, 0.3s);
+  }
+
   &:hover {
     @include rotate-hover;
   }
-
-  // svg {
-  //   @include transition;
-
-  //   &:active, &:focus {
-  //     @include click-button;
-  //   }
-
-  //   &:hover {
-  //     @include rotate-hover;
-  //   }
-  // }
 }
 </style>
