@@ -3,7 +3,6 @@
     <div class="uk-card-header" v-if="hasTitle">
       <div class="uk-card-title">
         <h3>{{ title }}</h3>
-        <!-- <div class="uk-close" @click.prevent="closeCard" v-if="isClosable">&times;</div> -->
         <close-button @close="closeCard" v-if="isClosable" />
       </div>
     </div>
@@ -126,7 +125,7 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/base";
-@import "../assets/scss/partials/shadows";
+/*@import "../assets/scss/partials/shadows";*/
 
 :root {
   --uk-card-bg-color: $gray-1;

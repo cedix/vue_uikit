@@ -1,19 +1,27 @@
 @mixin animation(
   $name,
   $duration: var(--transition-duration),
-  $style: var(--transition-style)
+  $style: var(--transition-style),
+  $delay: 0
 ) {
-  animation: $name $duration $style;
-  // transition: all $duration $style;
+  animation-name: $name;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-timing-function: $style;
 }
 
-@mixin rotate-hover {
-  transform: rotate(180deg);
+@mixin rotate-hover($amount: 180deg) {
+  transform: rotate($amount);
+}
+
+@mixin scale-click($amount: 0.7) {
+  transform: scale($amount);
 }
 
 @mixin transition(
+  $scope: all,
   $duration: var(--transition-duration),
   $style: var(--transition-style)
 ) {
-  transition: all $duration $style;
+  transition: $scope $duration $style;
 }

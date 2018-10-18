@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="uk-close" @click.prevent="close" ref="close">
+    <div class="uk-close" @click.prevent="close">
       <svg xmlns="http://www.w3.org/2000/svg" 
           xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 256 256">
         <g>
@@ -33,7 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/base";
-@import "../assets/scss/partials/animations";
 
 .uk-close {
   --uk-close-size: 1em;
@@ -42,15 +41,14 @@ export default {
   height: var(--uk-close-size);
   width: var(--uk-close-size);
 
-  @include transition;
+  @include transition($scope: transform, $duration: 0.1s);
 
-  &:active, 
-  &:focus {
-    @include animation(click-button, 0.3s);
+  &:active {
+    @include scale-click;
   }
 
   &:hover {
-    @include rotate-hover;
+    @include animation($name: rotate-hover, $duration: 0.2s);
   }
 }
 </style>

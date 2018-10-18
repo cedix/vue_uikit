@@ -1,12 +1,8 @@
 // Application's imports
 @import "colors";
-@import "variables";
 
 // Mixins
 @import "mixins/animations";
 @import "mixins/colors";
 @import "mixins/layout";
 @import "mixins/shadow";
-
-// Reset
-@import "partials/reset";
