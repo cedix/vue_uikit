@@ -1,0 +1,15 @@
+@import "../colors";
+
+div,
+p,
+span {
+  &.uk-color-error {
+    color: var(--color-error);
+  }
+  &.uk-color-success {
+    color: var(--color-success);
+  }
+  &.uk-color-warning {
+    color: var(--color-warning);
+  }
+}

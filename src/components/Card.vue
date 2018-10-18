@@ -34,7 +34,7 @@ export default {
     elevation: {
       type: Number,
       required: false,
-      default: 1
+      default: 2
     },
     rounded: {
       type: Boolean,
@@ -105,14 +105,14 @@ export default {
 
       // Square
       // - set before rounded because it will override its value
-      // if (this.square || this.square === true) {
-      //   this.localRounded = false;
-      // }
+      if (this.square || this.square === true) {
+        this.localRounded = false;
+      }
 
       // Rounded
-      // if (this.localRounded === true) {
-      //   this.classes.push("rounded");
-      // }
+      if (this.localRounded === true) {
+        this.classes.push("uk-card-rounded");
+      }
     }
   },
 
@@ -125,7 +125,6 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/base";
-/*@import "../assets/scss/partials/shadows";*/
 
 :root {
   --uk-card-bg-color: $gray-1;
@@ -141,6 +140,18 @@ export default {
 
   background-color: var(--uk-card-bg-color);
   position: relative;
+
+  h1, h2, h3, h4, h5, h6, p {
+    @include reset;
+  }
+
+  p{
+    margin-bottom: calc( var(--uk-card-padding) * 0.5 );
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   .uk-card-close {
     float: right;
@@ -167,6 +178,22 @@ export default {
       padding: 0 !important;
     }
   }
+
+  // ---------------------------------------------------
+  // Card modifiers
+  // ---------------------------------------------------
+
+  &.uk-card-rounded {
+
+    $radius: var(--border-radius);
+    border-radius: $radius;
+
+    .uk-card-header {
+      border-radius: $radius $radius 0 0;
+    }
+
+  }
+
 
   // ---------------------------------------------------
   // Color modifiers
