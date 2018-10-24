@@ -5,6 +5,11 @@
 // Reset
 // @import "partials/reset";
 
+// Common rules
+* {
+  box-sizing: border-box;
+}
+
 // Partials
 @import "partials/animations";
 @import "partials/colors";
