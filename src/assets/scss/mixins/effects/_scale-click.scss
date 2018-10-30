@@ -1,0 +1,3 @@
+@mixin scale-click($amount: 0.7) {
+  transform: scale($amount);
+}

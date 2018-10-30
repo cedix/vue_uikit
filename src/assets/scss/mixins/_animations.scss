@@ -1,3 +1,9 @@
+@import "effects/hacks";
+
+@import "effects/rotate-hover";
+@import "effects/scale-click";
+@import "effects/shutter-out-horizontal";
+
 @mixin animation(
   $name,
   $duration: var(--transition-duration),
@@ -8,14 +14,6 @@
   animation-delay: $delay;
   animation-duration: $duration;
   animation-timing-function: $style;
-}
-
-@mixin rotate-hover($amount: 180deg) {
-  transform: rotate($amount);
-}
-
-@mixin scale-click($amount: 0.7) {
-  transform: scale($amount);
 }
 
 @mixin transition(

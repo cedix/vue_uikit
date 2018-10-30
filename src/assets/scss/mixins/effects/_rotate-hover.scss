@@ -1,0 +1,3 @@
+@mixin rotate-hover($amount: 180deg) {
+  transform: rotate($amount);
+}

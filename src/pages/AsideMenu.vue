@@ -6,9 +6,6 @@
         <li><router-link to="/buttons">Buttons</router-link></li>
         <li><router-link to="/cards">Cards</router-link></li>
       </ul>
-      <!--<h2>Components</h2>
-      <router-link to="/buttons">Buttons</router-link>
-      <router-link to="/cards">Cards</router-link>-->
     </section>
   </aside>
 </template>

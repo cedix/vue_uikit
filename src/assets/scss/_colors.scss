@@ -15,27 +15,41 @@ $gray-2: #f2f2f3;
 $gray-1: #fafafa;
 $white: #fff;
 
-$color-success: #88c459;
-$color-success-bg: color-bg($color-success);
-$color-success-bg-accent: color-bg-accent($color-success);
+$color-info: #4d84f4;
+$color-info-bg: color-bg($color-info);
+$color-info-bg-accent: color-bg-accent($color-info);
+$color-info-dark: color-darken($color-info);
+$color-info-light: color-lighten($color-info);
 $color-error: #f5414f;
 $color-error-bg: color-bg($color-error);
 $color-error-bg-accent: color-bg-accent($color-error);
-$color-warning: #ffd137;
+$color-error-dark: color-darken($color-error);
+$color-error-light: color-lighten($color-error);
+$color-success: #88c459;
+$color-success-bg: color-bg($color-success);
+$color-success-bg-accent: color-bg-accent($color-success);
+$color-success-dark: color-darken($color-success);
+$color-success-light: color-lighten($color-success);
+$color-warning: #ffc919;
 $color-warning-bg: color-bg($color-warning);
 $color-warning-bg-accent: color-bg-accent($color-warning);
+$color-warning-dark: color-darken($color-warning);
+$color-warning-light: color-lighten($color-warning);
 
+// $color-accent: #f5414f;
+// $color-accent-bg: rgba($color-accent, 0.2);
+// $color-accent-dark: darken($color-accent, 15%);
+// $color-accent-light: lighten($color-accent, 15%);
 $color-primary: #4d84f4;
-$color-primary-bg: rgba($color-primary, 0.2);
-$color-primary-dark: darken($color-primary, 15%);
-$color-primary-light: lighten($color-primary, 15%);
-$color-accent: #f5414f;
-$color-accent-bg: rgba($color-accent, 0.2);
-$color-accent-dark: darken($color-accent, 15%);
-$color-accent-light: lighten($color-accent, 15%);
-
-/* Brand */
-$color-brand: #efc755;
+$color-primary-bg: color-bg($color-primary);
+$color-primary-bg-accent: color-bg-accent($color-primary);
+$color-primary-dark: color-darken($color-primary);
+$color-primary-light: color-lighten($color-primary);
+$color-secondary: $gray-6;
+$color-secondary-bg: color-bg($color-secondary);
+$color-secondary-bg-accent: color-bg-accent($color-secondary);
+$color-secondary-dark: color-darken($color-secondary);
+$color-secondary-light: color-lighten($color-secondary);
 
 /* border */
 $color-border: $gray-2;
@@ -49,7 +63,7 @@ $color-text-heading: $black;
 $color-text-subtle: $gray-6;
 $color-link: $color-primary;
 $color-link-visited: $color-primary-dark;
-$color-mark: $color-accent-bg;
+// $color-mark: $color-accent-bg;
 $color-blockquote-border: $gray-2;
 
 /* forms */

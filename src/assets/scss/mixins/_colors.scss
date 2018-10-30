@@ -5,3 +5,11 @@
 @function color-bg-accent($color) {
   @return rgba($color, 0.8);
 }
+
+@function color-darken($color) {
+  @return rgba($color, 1.3);
+}
+
+@function color-lighten($color) {
+  @return rgba($color, 0.7);
+}

@@ -3,12 +3,16 @@
 // -------------------------------------------------------------
 @import "colors";
 
+$enable-gradients: false;
+$enable-shadows: true;
+
 :root {
   // -------------------------------------------------------------
   // BORDER
   // -------------------------------------------------------------
-  --border-radius: 8px;
-  --border-width: 1px;
+  --border-radius-round: 20px;
+  --border-radius-std: 8px;
+  // --border-width: 1px;
 
   // -------------------------------------------------------------
   // COLORS
@@ -16,12 +20,6 @@
   --color-error: $color-error;
   --color-success: $color-success;
   --color-warning: $color-warning;
-
-  // -------------------------------------------------------------
-  // ENABLE FUNCTIONNALITIES
-  // -------------------------------------------------------------
-  --enable-gradients: false;
-  --enable-shadows: true;
 
   // -------------------------------------------------------------
   // LAYOUT
