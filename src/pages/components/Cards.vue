@@ -4,7 +4,16 @@
     <uk-card>This is a standard card</uk-card>
     <uk-card closable>This is a standard closable card</uk-card>
     <uk-card title="My Title" closable>This is a standard card with a Title</uk-card>
-    <uk-card title="My Title" square closable>Because Cards are by default rounded we can have square corners by setting the property <b>square</b> to true</uk-card>
+    <uk-card title="My Title" rounded closable>Because Cards are by default <b>squared</b> we can have rounded corners by setting the property <b>rounded</b> to true</uk-card>
+    <uk-card title="My Primary Card" class="uk-color-primary" closable>
+      <p>This is a card colored with <span class="uk-color-primary">primary</span> colors.</p>
+    </uk-card>
+    <uk-card title="My Secondary Card" class="uk-color-secondary" closable>
+      <p>This is a card colored with <span class="uk-color-secondary">secondary</span> colors.</p>
+    </uk-card>
+    <uk-card title="My Info Card" class="uk-color-info" closable>
+      <p>This is a card colored with <span class="uk-color-info">info</span> colors.</p>
+    </uk-card>
     <uk-card title="My Error Card" class="uk-color-error" :elevation=4 closable>
       <p>This is a card colored with <span class="uk-color-error">error</span> colors.</p>
       <p>You can also change the elevation with property <b>elevation</b> which accepts values from <b>0</b> to <b>9</b>. Here <b>4</b> is set.</p>

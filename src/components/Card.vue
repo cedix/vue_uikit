@@ -1,15 +1,18 @@
 <template>
   <div class="uk-card" :class="classes" v-if="!closed">
     <div class="uk-card-header" v-if="hasTitle">
-      <div class="uk-card-title">
-        <h3>{{ title }}</h3>
-        <close-button @close="closeCard" v-if="isClosable" />
-      </div>
+      <slot name="header">
+        <div class="uk-card-title">
+          <h3>{{ title }}</h3>
+          <close-button class="uk-card-close" @close="closeCard" v-if="isClosable" />
+        </div>
+      </slot>
     </div>
     <div class="uk-card-content">
       <slot />
       <close-button class="uk-card-close" @close="closeCard" v-if="isClosable && !hasTitle" />
     </div>
+    <slot name="footer" class="uk-card-footer" />
   </div>
 </template>
 
@@ -37,11 +40,6 @@ export default {
       default: 2
     },
     rounded: {
-      type: Boolean,
-      required: false,
-      default: true
-    },
-    square: {
       type: Boolean,
       required: false,
       default: false
@@ -76,6 +74,9 @@ export default {
       } else {
         return false;
       }
+    },
+    hasFooter: function() {
+      return this.$slots.footer;
     },
     hasTitle: function() {
       if (this.title && this.title !== "") {
@@ -128,14 +129,18 @@ export default {
 
 :root {
   --uk-card-bg-color: $gray-1;
+  --uk-card-border-radius: 0;
+  --uk-card-header-height: 3em;
   --uk-card-title-bg-color: $gray-3;
   --uk-card-padding: 1.4em;
 }
 
 .uk-card {
+  border-radius: var(--uk-card-border-radius);
+  clear: both;
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: auto;
+  grid-template-rows: var(--uk-card-header-height) auto auto;
   grid-row-gap: 0.5em;
 
   background-color: var(--uk-card-bg-color);
@@ -154,6 +159,7 @@ export default {
   }
 
   .uk-card-close {
+    align-self: center;
     float: right;
   }
 
@@ -163,6 +169,7 @@ export default {
 
   .uk-card-header {
     background-color: var(--uk-card-title-bg-color);
+    border-radius: var(--uk-card-border-radius) var(--uk-card-border-radius) 0 0;
   }
 
   .uk-card-title {
@@ -170,10 +177,12 @@ export default {
 
     display: flex;
     flex-flow: row wrap;
+    height: 100%;
     justify-content: space-between;
     padding: calc(var(--uk-card-padding) / 2) var(--uk-card-padding);
 
     h3 {
+      align-self: center;
       font-weight: bold;
       padding: 0 !important;
     }
@@ -185,12 +194,7 @@ export default {
 
   &.uk-card-rounded {
 
-    $radius: var(--border-radius);
-    border-radius: $radius;
-
-    .uk-card-header {
-      border-radius: $radius $radius 0 0;
-    }
+    --uk-card-border-radius: var(--border-radius-std);
 
   }
 
@@ -199,9 +203,24 @@ export default {
   // Color modifiers
   // ---------------------------------------------------
 
+  &.uk-color-info {
+    --uk-card-bg-color: $color-info-bg;
+    --uk-card-title-bg-color: $color-info-bg-accent;
+  }
+
   &.uk-color-error {
     --uk-card-bg-color: $color-error-bg;
     --uk-card-title-bg-color: $color-error-bg-accent;
+  }
+
+  &.uk-color-primary {
+    --uk-card-bg-color: $color-primary-bg;
+    --uk-card-title-bg-color: $color-primary-bg-accent;
+  }
+
+  &.uk-color-secondary {
+    --uk-card-bg-color: $color-secondary-bg;
+    --uk-card-title-bg-color: $color-secondary-bg-accent;
   }
 
   &.uk-color-success {

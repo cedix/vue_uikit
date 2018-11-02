@@ -39,7 +39,7 @@ export default {
 
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 300px auto 400px;
+  grid-template-columns: 20% auto 10%;
   grid-template-areas:
     "header  header  header"
     "sidebar content side"
