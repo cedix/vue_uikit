@@ -163,6 +163,10 @@ export default {
   }
 
   .uk-card-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: var(--uk-card-padding);
   }
 

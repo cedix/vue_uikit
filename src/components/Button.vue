@@ -84,11 +84,23 @@ export default {
   &.uk-button-circle {
     --uk-button-border: 0px solid;
     --uk-button-border-radius: 50%;
-    --uk-button-padding: 12px 10px;
+    --uk-button-circle-size: 39px;
+    --uk-button-padding: 0;
+    // --uk-button-padding: 12px 10px;
     --uk-button-text-color: $white;
 
-    max-width: 39px;
-    min-width: 39px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    max-height: var(--uk-button-circle-size);
+    min-height: var(--uk-button-circle-size);
+    max-width: var(--uk-button-circle-size);
+    min-width: var(--uk-button-circle-size);
+
+    // * {
+    //   align-self: center;
+    //   justify-self:center;
+    // }
 
     // Color Modifiers
     &.uk-color-info {

@@ -50,20 +50,20 @@
       <uk-button class="btn-demo" type="text" color="warning" disabled>Disabled Warning Button</uk-button>
     </uk-card>
     <uk-card class="card-demo-buttons" title="Circle buttons">
-      <uk-button class="btn-demo" type="circle">I</uk-button>
-      <uk-button class="btn-demo" type="circle" color="secondary">CT</uk-button>
-      <uk-button class="btn-demo" type="circle" color="info">UK</uk-button>
-      <uk-button class="btn-demo" type="circle" color="error">UK</uk-button>
+      <uk-button class="btn-demo" type="circle">CT</uk-button>
+      <uk-button class="btn-demo" type="circle" color="secondary">SE</uk-button>
+      <uk-button class="btn-demo" type="circle" color="info">I</uk-button>
+      <uk-button class="btn-demo" type="circle" color="error">ERR</uk-button>
       <uk-button class="btn-demo" type="circle" color="success">UK</uk-button>
-      <uk-button class="btn-demo" type="circle" color="warning">UK</uk-button>
+      <uk-button class="btn-demo" type="circle" color="warning">WARN</uk-button>
     </uk-card>
     <uk-card class="card-demo-buttons" title="Disabled Circle buttons">
-      <uk-button class="btn-demo" type="circle" disabled>I</uk-button>
-      <uk-button class="btn-demo" type="circle" color="secondary" disabled>CT</uk-button>
-      <uk-button class="btn-demo" type="circle" color="info" disabled>UK</uk-button>
-      <uk-button class="btn-demo" type="circle" color="error" disabled>UK</uk-button>
+      <uk-button class="btn-demo" type="circle" disabled>CT</uk-button>
+      <uk-button class="btn-demo" type="circle" color="secondary" disabled>SE</uk-button>
+      <uk-button class="btn-demo" type="circle" color="info" disabled>I</uk-button>
+      <uk-button class="btn-demo" type="circle" color="error" disabled>ERR</uk-button>
       <uk-button class="btn-demo" type="circle" color="success" disabled>UK</uk-button>
-      <uk-button class="btn-demo" type="circle" color="warning" disabled>UK</uk-button>
+      <uk-button class="btn-demo" type="circle" color="warning" disabled>WARN</uk-button>
     </uk-card>
   </section>
 </template>
