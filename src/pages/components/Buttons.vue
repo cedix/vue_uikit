@@ -49,6 +49,22 @@
       <uk-button class="btn-demo" type="text" color="success" disabled>Disabled Success Button</uk-button>
       <uk-button class="btn-demo" type="text" color="warning" disabled>Disabled Warning Button</uk-button>
     </uk-card>
+    <uk-card class="card-demo-buttons" title="Circle buttons">
+      <uk-button class="btn-demo" type="circle">I</uk-button>
+      <uk-button class="btn-demo" type="circle" color="secondary">CT</uk-button>
+      <uk-button class="btn-demo" type="circle" color="info">UK</uk-button>
+      <uk-button class="btn-demo" type="circle" color="error">UK</uk-button>
+      <uk-button class="btn-demo" type="circle" color="success">UK</uk-button>
+      <uk-button class="btn-demo" type="circle" color="warning">UK</uk-button>
+    </uk-card>
+    <uk-card class="card-demo-buttons" title="Disabled Circle buttons">
+      <uk-button class="btn-demo" type="circle" disabled>I</uk-button>
+      <uk-button class="btn-demo" type="circle" color="secondary" disabled>CT</uk-button>
+      <uk-button class="btn-demo" type="circle" color="info" disabled>UK</uk-button>
+      <uk-button class="btn-demo" type="circle" color="error" disabled>UK</uk-button>
+      <uk-button class="btn-demo" type="circle" color="success" disabled>UK</uk-button>
+      <uk-button class="btn-demo" type="circle" color="warning" disabled>UK</uk-button>
+    </uk-card>
   </section>
 </template>
 <script>

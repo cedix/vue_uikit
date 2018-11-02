@@ -37,7 +37,7 @@ export default {
     elevation: {
       type: Number,
       required: false,
-      default: 2
+      default: 0
     },
     rounded: {
       type: Boolean,
@@ -130,7 +130,7 @@ export default {
 :root {
   --uk-card-bg-color: $gray-1;
   --uk-card-border-radius: 0;
-  --uk-card-header-height: 3em;
+  --uk-card-header-height: 2.6em;
   --uk-card-title-bg-color: $gray-3;
   --uk-card-padding: 1.4em;
 }
@@ -140,8 +140,7 @@ export default {
   clear: both;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: var(--uk-card-header-height) auto auto;
-  grid-row-gap: 0.5em;
+  grid-template-rows: max-content 1fr;
 
   background-color: var(--uk-card-bg-color);
   position: relative;
@@ -170,6 +169,7 @@ export default {
   .uk-card-header {
     background-color: var(--uk-card-title-bg-color);
     border-radius: var(--uk-card-border-radius) var(--uk-card-border-radius) 0 0;
+    height: var(--uk-card-header-height);
   }
 
   .uk-card-title {

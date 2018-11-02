@@ -10,7 +10,8 @@
       color ? 'uk-color-' + color : ''
     ]"
   >
-    <slot />
+    <i :class="icon" v-if="icon" />
+    <span><slot v-if="$slots.default" /></span>
   </button>
 </template>
 <script>
@@ -26,6 +27,7 @@ export default {
       default: 'primary'
     },
     disabled: Boolean,
+    icon: String,
     loading: Boolean,
     nativeType:{
       type: String,
@@ -78,6 +80,96 @@ export default {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
+
+  &.uk-button-circle {
+    --uk-button-border: 0px solid;
+    --uk-button-border-radius: 50%;
+    --uk-button-padding: 12px 10px;
+    --uk-button-text-color: $white;
+
+    max-width: 39px;
+    min-width: 39px;
+
+    // Color Modifiers
+    &.uk-color-info {
+      --uk-button-bg-color: $color-info;
+
+      &:hover {
+        --uk-button-bg-color: $color-info-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-bg-color: $color-info-light;
+        --uk-button-text-color: $white;
+      }
+    }
+    &.uk-color-error {
+      --uk-button-bg-color: $color-error;
+
+      &:hover {
+        --uk-button-bg-color: $color-error-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-bg-color: $color-error-light;
+        --uk-button-text-color: $white;
+      }
+    }
+    &.uk-color-primary {
+      --uk-button-bg-color: $color-primary;
+
+      &:hover {
+        --uk-button-bg-color: $color-primary-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-bg-color: $color-primary-light;
+        --uk-button-text-color: $white;
+      }
+    }
+    &.uk-color-secondary {
+      --uk-button-bg-color: $color-secondary;
+
+      &:hover {
+        --uk-button-bg-color: $color-secondary-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-bg-color: $color-secondary-light;
+        --uk-button-text-color: $white;
+      }
+    }
+    &.uk-color-success {
+      --uk-button-bg-color: $color-success;
+
+      &:hover {
+        --uk-button-bg-color: $color-success-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-bg-color: $color-success-light;
+        --uk-button-text-color: $white;
+      }
+    }
+    &.uk-color-warning {
+      --uk-button-bg-color: $color-warning;
+
+      &:hover {
+        --uk-button-bg-color: $color-warning-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-bg-color: $color-warning-light;
+        --uk-button-text-color: $white;
+      }
+    }
+  }
 
   &.uk-button-plain {
     --uk-button-border: 0px solid;
