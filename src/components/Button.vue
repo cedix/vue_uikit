@@ -248,6 +248,86 @@ export default {
 
   }
 
+  &.uk-button-text {
+    --uk-button-bg-color: transparent;
+    --uk-button-border: 0px solid;
+    --uk-button-border-radius: 0;
+
+    // Color Modifiers
+    &.uk-color-info {
+      --uk-button-text-color: $color-info;
+
+      &:hover {
+        --uk-button-text-color: $color-info-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-text-color: $color-info-bg-accent;
+      }
+    }
+    &.uk-color-error {
+      --uk-button-text-color: $color-error;
+
+      &:hover {
+        --uk-button-text-color: $color-error-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-text-color: $color-error-bg-accent;
+      }
+    }
+    &.uk-color-primary {
+      --uk-button-text-color: $color-primary;
+
+      &:hover {
+        --uk-button-text-color: $color-primary-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-text-color: $color-primary-bg-accent;
+      }
+    }
+    &.uk-color-secondary {
+      --uk-button-text-color: $color-secondary;
+
+      &:hover {
+        --uk-button-text-color: $color-secondary-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-text-color: $color-secondary-bg-accent;
+      }
+    }
+    &.uk-color-success {
+      --uk-button-text-color: $color-success;
+
+      &:hover {
+        --uk-button-text-color: $color-success-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-text-color: $color-success-bg-accent;
+      }
+    }
+    &.uk-color-warning {
+      --uk-button-text-color: $color-warning;
+
+      &:hover {
+        --uk-button-text-color: $color-warning-light;
+      }
+
+      &:disabled,
+      &[disabled] {
+        --uk-button-text-color: $color-warning-bg-accent;
+      }
+    }
+  }
+
   &:disabled,
   &[disabled] {
     cursor: not-allowed;

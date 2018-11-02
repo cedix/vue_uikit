@@ -33,6 +33,22 @@
       <uk-button class="btn-demo" type="plain" color="success" disabled>Disabled Success Button</uk-button>
       <uk-button class="btn-demo" type="plain" color="warning" disabled>Disabled Warning Button</uk-button>
     </uk-card>
+    <uk-card class="card-demo-buttons" title="Text buttons">
+      <uk-button class="btn-demo" type="text">Primary</uk-button>
+      <uk-button class="btn-demo" type="text" color="secondary">Secondary</uk-button>
+      <uk-button class="btn-demo" type="text" color="info">Info</uk-button>
+      <uk-button class="btn-demo" type="text" color="error">Error</uk-button>
+      <uk-button class="btn-demo" type="text" color="success">Success</uk-button>
+      <uk-button class="btn-demo" type="text" color="warning">Warning</uk-button>
+    </uk-card>
+    <uk-card class="card-demo-buttons" title="Disabled Text buttons">
+      <uk-button class="btn-demo" type="text" disabled>Disabled Primary Button</uk-button>
+      <uk-button class="btn-demo" type="text" color="secondary" disabled>Disabled Secondary Button</uk-button>
+      <uk-button class="btn-demo" type="text" color="info" disabled>Disabled Info Button</uk-button>
+      <uk-button class="btn-demo" type="text" color="error" disabled>Disabled Error Button</uk-button>
+      <uk-button class="btn-demo" type="text" color="success" disabled>Disabled Success Button</uk-button>
+      <uk-button class="btn-demo" type="text" color="warning" disabled>Disabled Warning Button</uk-button>
+    </uk-card>
   </section>
 </template>
 <script>
