@@ -1,0 +1,43 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$icon-ic_close_48px: unicode(ea02);
+$icon-ic_add_48px: unicode(ea03);
+$icon-ic_edit_48px: unicode(ea04);
+$icon-ic_search_48px: unicode(ea05);
+$icon-ic_delete_forever_48px: unicode(ea06);
+$icon-ic_star_border_24px: unicode(ea07);
+$icon-ic_check_48px: unicode(ea08);
+
+.icon-ic_close_48px::before {
+  content: $icon-ic_close_48px;
+}
+
+.icon-ic_add_48px::before {
+  content: $icon-ic_add_48px;
+}
+
+.icon-ic_edit_48px::before {
+  content: $icon-ic_edit_48px;
+}
+
+.icon-ic_search_48px::before {
+  content: $icon-ic_search_48px;
+}
+
+.icon-ic_delete_forever_48px::before {
+  content: $icon-ic_delete_forever_48px;
+}
+
+.icon-ic_star_border_24px::before {
+  content: $icon-ic_star_border_24px;
+}
+
+.icon-ic_check_48px::before {
+  content: $icon-ic_check_48px;
+}
+

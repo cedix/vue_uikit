@@ -41,14 +41,6 @@ export default {
     }
   },
 
-  // computed: {
-  //   cssProps() { 
-  //     return {
-  //       '--uk-button-border-radius': ( this.round === true ? 'var(--border-radius-round)' : '0' )
-  //     }
-  //   }
-  // },
-
   methods: {
     handleClick(evt) {
       this.$emit("click", evt);
@@ -86,7 +78,6 @@ export default {
     --uk-button-border-radius: 50%;
     --uk-button-circle-size: 39px;
     --uk-button-padding: 0;
-    // --uk-button-padding: 12px 10px;
     --uk-button-text-color: $white;
 
     display: flex;
@@ -96,11 +87,6 @@ export default {
     min-height: var(--uk-button-circle-size);
     max-width: var(--uk-button-circle-size);
     min-width: var(--uk-button-circle-size);
-
-    // * {
-    //   align-self: center;
-    //   justify-self:center;
-    // }
 
     // Color Modifiers
     &.uk-color-info {
@@ -277,10 +263,6 @@ export default {
 
     // Hover
     @include shutter-out-horizontal($primaryColor: var(--uk-button-bg-color), $activeColor: var(--uk-button-border-color));
-    // &:hover {
-    //   border: var(--uk-button-border);
-    //   border-color: red;
-    // }
 
     // Color Modifiers
     &.uk-color-info {
@@ -357,12 +339,17 @@ export default {
     --uk-button-border: 0px solid;
     --uk-button-border-radius: 0;
 
+    &:hover {
+      --uk-button-border-radius: var(--border-radius-std);
+    }
+
     // Color Modifiers
     &.uk-color-info {
       --uk-button-text-color: $color-info;
 
       &:hover {
-        --uk-button-text-color: $color-info-light;
+        --uk-button-bg-color: $color-info-bg;
+        // --uk-button-text-color: $color-info-light;
       }
 
       &:disabled,
@@ -374,7 +361,8 @@ export default {
       --uk-button-text-color: $color-error;
 
       &:hover {
-        --uk-button-text-color: $color-error-light;
+        --uk-button-bg-color: $color-error-bg;
+        // --uk-button-text-color: $color-error-light;
       }
 
       &:disabled,
@@ -386,7 +374,8 @@ export default {
       --uk-button-text-color: $color-primary;
 
       &:hover {
-        --uk-button-text-color: $color-primary-light;
+        --uk-button-bg-color: $color-primary-bg;
+        // --uk-button-text-color: $color-primary-light;
       }
 
       &:disabled,
@@ -398,7 +387,8 @@ export default {
       --uk-button-text-color: $color-secondary;
 
       &:hover {
-        --uk-button-text-color: $color-secondary-light;
+        --uk-button-bg-color: $color-secondary-bg;
+        // --uk-button-text-color: $color-secondary-light;
       }
 
       &:disabled,
@@ -410,7 +400,8 @@ export default {
       --uk-button-text-color: $color-success;
 
       &:hover {
-        --uk-button-text-color: $color-success-light;
+        --uk-button-bg-color: $color-success-bg;
+        // --uk-button-text-color: $color-success-light;
       }
 
       &:disabled,
@@ -422,7 +413,8 @@ export default {
       --uk-button-text-color: $color-warning;
 
       &:hover {
-        --uk-button-text-color: $color-warning-light;
+        --uk-button-bg-color: $color-warning-bg;
+        // --uk-button-text-color: $color-warning-light;
       }
 
       &:disabled,
@@ -430,10 +422,16 @@ export default {
         --uk-button-text-color: $color-warning-bg-accent;
       }
     }
+
+    &:disabled,
+    &[disabled] {
+      --uk-button-bg-color: transparent !important;
+    }
   }
 
   &:disabled,
   &[disabled] {
+    --uk-button-bg-color: transparent;
     cursor: not-allowed;
   }
 

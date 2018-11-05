@@ -50,7 +50,7 @@
       <uk-button class="btn-demo" type="text" color="warning" disabled>Disabled Warning Button</uk-button>
     </uk-card>
     <uk-card class="card-demo-buttons" title="Circle buttons">
-      <uk-button class="btn-demo" type="circle">CT</uk-button>
+      <uk-button class="btn-demo" type="circle" icon="icon-ic_edit_48px"></uk-button>
       <uk-button class="btn-demo" type="circle" color="secondary">SE</uk-button>
       <uk-button class="btn-demo" type="circle" color="info">I</uk-button>
       <uk-button class="btn-demo" type="circle" color="error">ERR</uk-button>
