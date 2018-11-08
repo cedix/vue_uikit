@@ -5,12 +5,12 @@
         <h2>Components</h2>
         <li><router-link to="/buttons">Buttons</router-link></li>
         <li><router-link to="/cards">Cards</router-link></li>
+        <li><router-link to="/icons">Icons</router-link></li>
       </ul>
     </section>
   </aside>
 </template>
 <style lang="scss" scoped>
-
 $link-color: #242424;
 
 a {
@@ -29,11 +29,11 @@ a {
     width: 100%;
     height: 2px;
     bottom: -2px;
-    left:0;
-    background-color: #7C8C9C;
+    left: 0;
+    background-color: #7c8c9c;
     visibility: hidden;
     transform: scaleX(0);
-    transition: all 0.5s cubic-bezier(1,.25,0,.75) 0s;
+    transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
   }
 
   &:hover:before {

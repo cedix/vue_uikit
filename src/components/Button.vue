@@ -1,17 +1,14 @@
 <template>
-  <button 
+  <button
     class="uk-button"
     @click="handleClick"
     :autofocus="autofocus"
     :disabled="disabled"
     :type="nativeType"
-    :class="[
-      type ? 'uk-button-' + type : '',
-      color ? 'uk-color-' + color : ''
-    ]"
+    :class="[type ? 'uk-button-' + type : '', color ? 'uk-color-' + color : '']"
   >
-    <i :class="icon" v-if="icon" />
-    <span><slot v-if="$slots.default" /></span>
+    <i class="icon" :class="icon" v-if="icon" />
+    <span><slot v-if="$slots.default"/></span>
   </button>
 </template>
 <script>
@@ -24,20 +21,20 @@ export default {
     color: {
       type: String,
       required: false,
-      default: 'primary'
+      default: "primary"
     },
     disabled: Boolean,
     icon: String,
     loading: Boolean,
-    nativeType:{
+    nativeType: {
       type: String,
       required: false,
-      default: 'button'
+      default: "button"
     },
     type: {
       type: String,
       required: false,
-      default: 'round'
+      default: "round"
     }
   },
 
@@ -61,7 +58,6 @@ export default {
 }
 
 .uk-button {
-
   background-color: var(--uk-button-bg-color);
   border: var(--uk-button-border) var(--uk-button-border-color);
   border-radius: var(--uk-button-border-radius);
@@ -256,13 +252,14 @@ export default {
   }
 
   &.uk-button-round {
-
+    // --uk-button-bg-color: $white;
     --uk-button-border-radius: var(--border-radius-round);
 
-    // border: var(--uk-button-border);
-
     // Hover
-    @include shutter-out-horizontal($primaryColor: var(--uk-button-bg-color), $activeColor: var(--uk-button-border-color));
+    @include shutter-out-horizontal(
+      $primaryColor: var(--uk-button-bg-color),
+      $activeColor: var(--uk-button-border-color)
+    );
 
     // Color Modifiers
     &.uk-color-info {
@@ -331,7 +328,6 @@ export default {
         --uk-button-text-color: $color-warning-light;
       }
     }
-
   }
 
   &.uk-button-text {
@@ -434,7 +430,5 @@ export default {
     --uk-button-bg-color: transparent;
     cursor: not-allowed;
   }
-
 }
-
 </style>

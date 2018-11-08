@@ -8,13 +8,14 @@ Generated using nucleoapp.com
 @import "mixins";
 
 @font-face {
-  font-family: 'vue-uikit';
-  src: url('#{$icon-font-path}/vue-uikit.eot');
-  src: url('#{$icon-font-path}/vue-uikit.eot') format('embedded-opentype'),
-    url('#{$icon-font-path}/vue-uikit.woff2') format('woff2'),
-    url('#{$icon-font-path}/vue-uikit.woff') format('woff'),
-    url('#{$icon-font-path}/vue-uikit.ttf') format('truetype'),
-    url('#{$icon-font-path}/vue-uikit.svg') format('svg');
+  font-family: "vue-uikit";
+  src: url("@/assets/fonts/vue-uikit/fonts/vue-uikit.eot");
+  src: url("@/assets/fonts/vue-uikit/fonts/vue-uikit.eot")
+      format("embedded-opentype"),
+    url("@/assets/fonts/vue-uikit/fonts/vue-uikit.woff2") format("woff2"),
+    url("@/assets/fonts/vue-uikit/fonts/vue-uikit.woff") format("woff"),
+    url("@/assets/fonts/vue-uikit/fonts/vue-uikit.ttf") format("truetype"),
+    url("@/assets/fonts/vue-uikit/fonts/vue-uikit.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +26,7 @@ Generated using nucleoapp.com
 
 .icon {
   display: inline-block;
-  font: normal normal normal 1em/1 'vue-uikit';
+  font: normal normal normal 1em/1 "vue-uikit";
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -133,23 +134,23 @@ Generated using nucleoapp.com
   rotated/flipped icons
 -------------------------*/
 
-.icon-rotate-90  {
-	@include icon-rotate(90deg, 1);
+.icon-rotate-90 {
+  @include icon-rotate(90deg, 1);
 }
 
 .icon-rotate-180 {
-	@include icon-rotate(180deg, 2);
+  @include icon-rotate(180deg, 2);
 }
 
 .icon-rotate-270 {
-	@include icon-rotate(270deg, 3);
+  @include icon-rotate(270deg, 3);
 }
 
 .icon-flip-y {
-	@include icon-flip(-1, 1, 0);
+  @include icon-flip(-1, 1, 0);
 }
 .icon-flip-x {
-	@include icon-flip(1, -1, 2);
+  @include icon-flip(1, -1, 2);
 }
 
 @import "icons";

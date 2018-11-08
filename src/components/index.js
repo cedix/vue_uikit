@@ -1,8 +1,10 @@
 import Vue from "vue";
 
+import UkButton from "./Button.vue";
 import UkCard from "./Card.vue";
 
 const Components = {
+  UkButton,
   UkCard
 };
 

@@ -4,7 +4,11 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 
+// Import CSS
 import "@/assets/scss/main.scss";
+
+// Import global JS functions
+import "@/functions/toPascalCase";
 
 Vue.config.productionTip = false;
 

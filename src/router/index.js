@@ -3,6 +3,8 @@ import Router from "vue-router";
 
 import Buttons from "@/pages/components/Buttons";
 import Cards from "@/pages/components/Cards";
+import Icons from "@/pages/components/Icons";
+
 import Demo from "@/pages/Demo";
 
 Vue.use(Router);
@@ -23,6 +25,11 @@ export default new Router({
       path: "/cards",
       name: "Cards",
       component: Cards
+    },
+    {
+      path: "/icons",
+      name: "Icons",
+      component: Icons
     }
   ]
 });

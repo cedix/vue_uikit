@@ -1,27 +1,33 @@
 <template>
-  <div class="uk-card" :class="classes" v-if="!closed">
+  <div class="uk-card" :class="classes" :style="cssProps" v-if="!closed">
     <div class="uk-card-header" v-if="hasTitle">
       <slot name="header">
         <div class="uk-card-title">
           <h3>{{ title }}</h3>
-          <close-button class="uk-card-close" @close="closeCard" v-if="isClosable" />
+          <close-button
+            class="uk-card-close"
+            @close="closeCard"
+            v-if="isClosable"
+          />
         </div>
       </slot>
     </div>
     <div class="uk-card-content">
       <slot />
-      <close-button class="uk-card-close" @close="closeCard" v-if="isClosable && !hasTitle" />
+      <close-button
+        class="uk-card-close"
+        @close="closeCard"
+        v-if="isClosable && !hasTitle"
+      />
     </div>
     <slot name="footer" class="uk-card-footer" />
   </div>
 </template>
 
 <script>
-
 import CloseButton from "./CloseButton";
 
 export default {
-
   name: "Card",
 
   props: {
@@ -39,6 +45,10 @@ export default {
       required: false,
       default: 0
     },
+    height: {
+      type: [Number, String],
+      default: "inherit"
+    },
     rounded: {
       type: Boolean,
       required: false,
@@ -52,6 +62,10 @@ export default {
     title: {
       type: String,
       required: false
+    },
+    width: {
+      type: [Number, String],
+      default: "inherit"
     }
   },
 
@@ -68,6 +82,13 @@ export default {
   },
 
   computed: {
+    cssProps: function() {
+      return {
+        "--uk-card-bg-color": this.bgColor,
+        "--uk-card-height": this.height,
+        "--uk-card-width": this.width
+      };
+    },
     isClosable: function() {
       if (this.closable && this.closable === true) {
         return true;
@@ -96,7 +117,7 @@ export default {
       let component = this.$el;
 
       // Background
-      component.style.backgroundColor = this.bgColor;
+      // component.style.backgroundColor = this.bgColor;
 
       // Text color
       component.style.color = this.textColor;
@@ -120,7 +141,6 @@ export default {
   mounted() {
     this.setStyles();
   }
-
 };
 </script>
 
@@ -131,8 +151,10 @@ export default {
   --uk-card-bg-color: $gray-1;
   --uk-card-border-radius: 0;
   --uk-card-header-height: 2.6em;
+  --uk-card-height: inherit;
   --uk-card-title-bg-color: $gray-3;
   --uk-card-padding: 1.4em;
+  --uk-card-width: inherit;
 }
 
 .uk-card {
@@ -141,16 +163,24 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr;
+  height: var(--uk-card-height);
+  width: var(--uk-card-width);
 
   background-color: var(--uk-card-bg-color);
   position: relative;
 
-  h1, h2, h3, h4, h5, h6, p {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     @include reset;
   }
 
-  p{
-    margin-bottom: calc( var(--uk-card-padding) * 0.5 );
+  p {
+    margin-bottom: calc(var(--uk-card-padding) * 0.5);
 
     &:last-child {
       margin-bottom: 0;
@@ -197,11 +227,8 @@ export default {
   // ---------------------------------------------------
 
   &.uk-card-rounded {
-
     --uk-card-border-radius: var(--border-radius-std);
-
   }
-
 
   // ---------------------------------------------------
   // Color modifiers
@@ -236,6 +263,5 @@ export default {
     --uk-card-bg-color: $color-warning-bg;
     --uk-card-title-bg-color: $color-warning-bg-accent;
   }
-
 }
 </style>
