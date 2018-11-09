@@ -40,6 +40,12 @@
       </uk-card>
       <uk-card height="100%" width="100%" bg-color="#eee">
         <div class="icon-block">
+          <uk-icon class="icon-img" name="more-vertical" size="2.5em" />
+          <span class="icon-name">more-vertical</span>
+        </div>
+      </uk-card>
+      <uk-card height="100%" width="100%" bg-color="#eee">
+        <div class="icon-block">
           <uk-icon class="icon-img" name="search" size="2.5em" />
           <span class="icon-name">search</span>
         </div>
