@@ -4,12 +4,12 @@
       <slot name="header">
         <div class="uk-card-title">
           <h3>{{ title }}</h3>
-          <close-button
-            class="uk-card-close"
-            @close="closeCard"
-            v-if="isClosable"
-          />
         </div>
+        <close-button
+          class="uk-card-close"
+          @close="closeCard"
+          v-if="isClosable"
+        />
       </slot>
     </div>
     <div class="uk-card-content">
@@ -159,7 +159,6 @@ export default {
 
 .uk-card {
   border-radius: var(--uk-card-border-radius);
-  clear: both;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr;
@@ -188,32 +187,33 @@ export default {
   }
 
   .uk-card-close {
-    align-self: center;
-    float: right;
+    display: flex;
+    align-items: center;
   }
 
   .uk-card-content {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: var(--uk-card-padding);
+
+    .uk-card-close {
+      float: right;
+    }
   }
 
   .uk-card-header {
+    display: grid;
+    grid-template-columns: 1fr 1em;
+
     background-color: var(--uk-card-title-bg-color);
     border-radius: var(--uk-card-border-radius) var(--uk-card-border-radius) 0 0;
     height: var(--uk-card-header-height);
+    padding: calc(var(--uk-card-padding) / 2) var(--uk-card-padding);
   }
 
   .uk-card-title {
-    $title-padding: calc(var(--uk-card-padding) * -1);
-
     display: flex;
     flex-flow: row wrap;
     height: 100%;
     justify-content: space-between;
-    padding: calc(var(--uk-card-padding) / 2) var(--uk-card-padding);
 
     h3 {
       align-self: center;

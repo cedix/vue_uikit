@@ -7,13 +7,19 @@
     :type="nativeType"
     :class="[type ? 'uk-button-' + type : '', color ? 'uk-color-' + color : '']"
   >
-    <i class="icon" :class="icon" v-if="icon" />
-    <span><slot v-if="$slots.default"/></span>
+    <uk-icon :name="icon" size="2.1em" v-if="icon" />
+    <span><slot v-if="$slots.default && !icon"/></span>
   </button>
 </template>
 <script>
+import UkIcon from "@/components/Icon";
+
 export default {
   name: "Button",
+
+  components: {
+    UkIcon
+  },
 
   props: {
     autofocus: Boolean,
@@ -70,19 +76,22 @@ export default {
   white-space: nowrap;
 
   &.uk-button-circle {
-    --uk-button-border: 0px solid;
+    --uk-button-border: none;
+    // --uk-button-border: 0px solid;
     --uk-button-border-radius: 50%;
-    --uk-button-circle-size: 39px;
+    --uk-button-circle-size: 50px;
     --uk-button-padding: 0;
     --uk-button-text-color: $white;
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    max-height: var(--uk-button-circle-size);
-    min-height: var(--uk-button-circle-size);
-    max-width: var(--uk-button-circle-size);
-    min-width: var(--uk-button-circle-size);
+    // max-height: var(--uk-button-circle-size);
+    // min-height: var(--uk-button-circle-size);
+    // max-width: var(--uk-button-circle-size);
+    // min-width: var(--uk-button-circle-size);
+
+    display: block;
+
+    height: var(--uk-button-circle-size);
+    width: var(--uk-button-circle-size);
 
     // Color Modifiers
     &.uk-color-info {
