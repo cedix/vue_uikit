@@ -28,7 +28,7 @@
       >
     </uk-card>
     <uk-card class="card-demo-buttons" title="Plain buttons">
-      <uk-button class="btn-demo" type="plain" elevation="1">Primary</uk-button>
+      <uk-button class="btn-demo" type="plain">Primary</uk-button>
       <uk-button class="btn-demo" type="plain" color="secondary"
         >Secondary</uk-button
       >
@@ -62,7 +62,7 @@
       >
     </uk-card>
     <uk-card class="card-demo-buttons" title="Text buttons">
-      <uk-button class="btn-demo" type="text" elevation="4">Primary</uk-button>
+      <uk-button class="btn-demo" type="text">Primary</uk-button>
       <uk-button class="btn-demo" type="text" color="secondary"
         >Secondary</uk-button
       >
@@ -97,12 +97,7 @@
     </uk-card>
     <uk-card class="card-demo-buttons" title="Circle buttons">
       <div class="buttons-wrapper">
-        <uk-button
-          class="btn-demo"
-          type="circle"
-          icon="add"
-          elevation="2"
-        ></uk-button>
+        <uk-button class="btn-demo" type="circle" icon="add"></uk-button>
         <uk-button class="btn-demo" type="circle" color="secondary"
           >SE</uk-button
         >
@@ -139,6 +134,45 @@
         >
       </div>
     </uk-card>
+    <uk-card class="card-demo-buttons" title="Elevated buttons">
+      <div class="buttons-wrapper">
+        <uk-button
+          class="btn-demo"
+          type="circle"
+          icon="add"
+          :elevation="2"
+        ></uk-button>
+        <p>
+          Circle buttons can be elevated from 1 to 9 (0 would not elevate the
+          button)
+        </p>
+      </div>
+      <div class="buttons-wrapper">
+        <uk-button
+          class="btn-demo"
+          type="plain"
+          color="secondary"
+          :elevation="4"
+          >Button</uk-button
+        >
+        <p>
+          Plain buttons can be elevated from 1 to 9 (0 would not elevate the
+          button)
+        </p>
+      </div>
+      <div class="buttons-wrapper">
+        <uk-button class="btn-demo" color="error" :elevation="4"
+          >Button</uk-button
+        >
+        <p>Round buttons can't be elevated</p>
+      </div>
+      <div class="buttons-wrapper">
+        <uk-button class="btn-demo" type="text" color="info" :elevation="4"
+          >Button</uk-button
+        >
+        <p>Text buttons can't be elevated</p>
+      </div>
+    </uk-card>
   </section>
 </template>
 <script>
@@ -162,6 +196,12 @@ export default {
 .buttons-wrapper {
   display: flex;
   flex-flow: row wrap;
+
+  p {
+    margin: auto;
+    text-align: left;
+    overflow-wrap: break-word;
+  }
 }
 
 .card-demo-buttons {

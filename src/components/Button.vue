@@ -35,7 +35,7 @@ export default {
     },
     disabled: Boolean,
     elevation: {
-      type: Number,
+      type: [Number, String],
       default: 0
     },
     icon: String,
