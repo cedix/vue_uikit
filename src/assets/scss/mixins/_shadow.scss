@@ -9,7 +9,7 @@ $multiplier: 2;
   $spread: 0;
 
   @if $depth <= 0 {
-    @return "none";
+    @return none;
   } @else {
     @if $inset == true {
       @return inset $x-axis $y-axis $blur $spread rgba($color, 0.3);

@@ -5,7 +5,11 @@
     :autofocus="autofocus"
     :disabled="disabled"
     :type="nativeType"
-    :class="[type ? 'uk-button-' + type : '', color ? 'uk-color-' + color : '']"
+    :class="[
+      type ? 'uk-button-' + type : '',
+      color ? 'uk-color-' + color : '',
+      'uk-shadow-' + elevation
+    ]"
   >
     <uk-icon :name="icon" size="2.1em" v-if="icon" />
     <span><slot v-if="$slots.default && !icon"/></span>
@@ -30,6 +34,10 @@ export default {
       default: "primary"
     },
     disabled: Boolean,
+    elevation: {
+      type: Number,
+      default: 0
+    },
     icon: String,
     loading: Boolean,
     nativeType: {
@@ -264,6 +272,8 @@ export default {
     // --uk-button-bg-color: $white;
     --uk-button-border-radius: var(--border-radius-round);
 
+    box-shadow: none !important;
+
     // Hover
     @include shutter-out-horizontal(
       $primaryColor: var(--uk-button-bg-color),
@@ -343,6 +353,8 @@ export default {
     --uk-button-bg-color: transparent;
     --uk-button-border: 0px solid;
     --uk-button-border-radius: 0;
+
+    box-shadow: none !important;
 
     &:hover {
       --uk-button-border-radius: var(--border-radius-std);

@@ -5,6 +5,7 @@
         <h2>Components</h2>
         <li><router-link to="/buttons">Buttons</router-link></li>
         <li><router-link to="/cards">Cards</router-link></li>
+        <li><router-link to="/checkboxes">Checkboxes</router-link></li>
         <li><router-link to="/icons">Icons</router-link></li>
       </ul>
     </section>
